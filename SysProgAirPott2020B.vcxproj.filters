@@ -32,7 +32,7 @@
     <ClCompile Include="ArrayListUtils.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="Known Problems.txt">
+    <ClCompile Include="generalFunctions.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,6 +56,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ArraylistUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generalFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

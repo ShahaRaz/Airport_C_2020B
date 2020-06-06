@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <assert.h>
 
+
+#ifndef __ArrayList
+#define __ArrayList
+
+
 typedef struct arraylist arraylist;
 void arraylist_destroy(arraylist* l);
 void arraylist_splice(arraylist* l, arraylist* source, unsigned int index);
@@ -30,3 +35,6 @@ struct arraylist {
 
 #pragma warning(disable:4996)
 #define _CRT_SECURE_NO_WARNINGS
+
+
+#endif // !__ArrayList

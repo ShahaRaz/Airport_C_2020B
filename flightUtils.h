@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "airPortUtils.h"
 #include "airportManagerUtils.h"
+#include "ArraylistUtils.h"
 
 
 #ifndef  __Flight
@@ -19,7 +20,7 @@ typedef struct flights {
 	int hourOfTakeoff;
 	float fligthVelocity; // MPH
 
-}Flight;
+} Flight;
 #endif
 
 #ifndef __AirportManager
@@ -46,14 +47,22 @@ typedef struct airports {
 } Airport;
 #endif
 
-
-float CalcfligthTime(Flight* flight1);
+#ifndef __FlightUtils
+#define __FlightUtils
+float CalcfligthTime(const Flight* flight1);
 int isFlightFromAtoB(Flight* f1, char* flyFrom, char* flyTo);
-int countFlightsFromAtoB(Flight** arrOfpFlights, char* flyFromA, char* flyToB); 
-Flight* manuallyCreateNewFlight();
+Flight* manuallyCreateNewFlight(const AirportManager* airportDB);
 char* setIATAofFlight(const AirportManager* airportDB);
 void printFlightDetails(Flight* f1);
 Flight* automaticllyCreateNewFlight(char* depIATA, char* arrIATA,
 	char* dateOfTakeOff, int hourOfTakeOff, float flightVelocity, const AirportManager* airportDB);
 void freeFlight(Flight* f1);
-void freeFlightsptrArray(Flight** pfligthArr);
+int countFlightsFromAtoB(arraylist* flightsPtrArr, char* flyFromA, char* flyToB);
+void writeFlightToBinaryFile(Flight* flight1, FILE* file1);
+void makeFictitiousFlight(char* dateOfTakeOff, int hourOfTakeOff, float flightVelocity, Flight* f1);
+void readFlightFromBinaryFile(FILE* file1, Flight* flight1, AirportManager* airportDB);
+void freeFlight_Void(void* freeMe);
+void printFlightDetails_void(void* f1);
+void copyFlight(const Flight* src, Flight* dest);
+
+#endif

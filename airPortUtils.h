@@ -18,11 +18,17 @@ typedef struct airports {
 } Airport;
 #endif
 
-
-Airport* ManuallyaddNewAirport();
-Airport* AutoaddNewAirport(char* name, char* country, char* IATAcode, float latitude, float longitude);
-int isAirPortsEq(Airport a1, Airport a2);
-int isAirportCodeFit(Airport a1, char* checkIATAcode);
-float calcDistanceBetweenAirports(Airport a1, Airport a2);
+#ifndef __AirportUtils
+#define __AirportUtils
+void ManuallyaddNewAirport(Airport* pNuAirport);
+int AutoaddNewAirport(char* name, char* country, char* IATAcode, float latitude, float longitude, Airport* pNuAirport);
+int isAirPortsEq(const Airport* a1, const  Airport* a2);
+int isAirportCodeFit(const Airport a1, const  char* checkIATAcode);
 float deg2rad(float deg);
 void printPortDetails(Airport aP);
+void writeAirportToFile(FILE* f, const Airport* a1);
+void readAirportFromFile(FILE* f, Airport* a1);
+void printPortDetails_Void(const void* port);
+float calcDistanceBetweenAirports(const Airport a1, const  Airport a2);
+void freeAirport(Airport* a1);
+#endif

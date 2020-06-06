@@ -24,7 +24,7 @@
     <ClCompile Include="airPortUtils.c" />
     <ClCompile Include="ArrayListUtils.c" />
     <ClCompile Include="flightUtils.c" />
-    <ClCompile Include="Known Problems.txt" />
+    <ClCompile Include="generalFunctions.c" />
     <ClCompile Include="Program.c" />
     <ClCompile Include="stringUtils.c" />
   </ItemGroup>
@@ -34,6 +34,7 @@
     <ClInclude Include="airPortUtils.h" />
     <ClInclude Include="ArraylistUtils.h" />
     <ClInclude Include="flightUtils.h" />
+    <ClInclude Include="generalFunctions.h" />
     <ClInclude Include="Program.h" />
     <ClInclude Include="stringUtils.h" />
   </ItemGroup>

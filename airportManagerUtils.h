@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "airPortUtils.h"
+#include "generalFunctions.h"
 
 
 
@@ -33,9 +34,15 @@ typedef struct airports {
 } Airport;
 #endif
 
+
+#ifndef __airportManagerUtils
+#define __airportManagerUtils
 AirportManager* InitDataBase();
-void addAirportToAirportManager(AirportManager *AirportDB, Airport insertMe);
-int enlargeAirPortsArray(AirportManager *AirportDB);
-void freeDB(AirportManager *AirportDB);
-void printAllAirports(AirportManager *AirportDB);
+void addAirportToAirportManager(AirportManager* AirportDB, Airport insertMe);
+int enlargeAirPortsArray(AirportManager* AirportDB);
+void freeDB(AirportManager* AirportDB);
 Airport* findAirportByIATA(const AirportManager* airportDB, const char* inIATA);
+int writeManagerToFile(const AirportManager* airportDB);
+int readManagerFromFile(FILE* f, AirportManager* airportDB);
+void printAllAirports(const AirportManager* airportDB);
+#endif // !__airportManagerUtils

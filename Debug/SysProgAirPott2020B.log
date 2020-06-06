@@ -1,12 +1,2 @@
-﻿  Program.c
-C:\Users\Shahar\source\repos\SysProgAirPott2020B\SysProgAirPott2020B\Program.c(16,1): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Shahar\source\repos\SysProgAirPott2020B\SysProgAirPott2020B\Program.c(17,1): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Shahar\source\repos\SysProgAirPott2020B\SysProgAirPott2020B\Program.c(95,46): warning C4020: 'pPrintEntireDataBase': too many actual parameters
-C:\Users\Shahar\source\repos\SysProgAirPott2020B\SysProgAirPott2020B\Program.c(161,28): warning C4090: 'function': different 'const' qualifiers
-C:\Users\Shahar\source\repos\SysProgAirPott2020B\SysProgAirPott2020B\Program.c(175,41): warning C4013: 'countCompanyFlightsFromAtoB' undefined; assuming extern returning int
-  airlineUtils.c
-C:\Users\Shahar\source\repos\SysProgAirPott2020B\SysProgAirPott2020B\airlineUtils.c(43,46): warning C4090: '=': different 'const' qualifiers
-C:\Users\Shahar\source\repos\SysProgAirPott2020B\SysProgAirPott2020B\airlineUtils.c(65,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Shahar\source\repos\SysProgAirPott2020B\SysProgAirPott2020B\airlineUtils.c(74,23): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  SysProgAirPott2020B.vcxproj -> C:\Users\Shahar\source\repos\SysProgAirPott2020B\Debug\SysProgAirPott2020B.exe
+﻿  AirportManagerUtils.c
+  SysProgAirPott2020B.vcxproj -> C:\Users\Shahar\Desktop\fuck c\26MayBackUp b4 changing costumes\SysProgAirPott2020B\Debug\SysProgAirPott2020B.exe
