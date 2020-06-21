@@ -194,6 +194,12 @@ int charToDigit(char replaceMe) {
 
 char* myGets(char* buffer, int size, FILE* fp)
 {
+// get  a string to buffer. 
+// after it use (getStrExactSize)
+// get from user using:  myGets(temp, MAX_STR_LEN, stdin);
+
+// get from file using:  myGets(temp, MAX_STR_LEN,(FILE*) fp);
+
 	if (buffer != NULL && size > 0)
 	{
 		if (fgets(buffer, size, fp))
